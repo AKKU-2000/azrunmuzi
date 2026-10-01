@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AZRUNMUZI — Freelance Mobile App Developer</title>
+  <meta name="description" content="Freelance mobile app developer portfolio. Flutter, React Native, Android, iOS and backend integrations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e50914">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AZRUNMUZI — Freelance Mobile App Developer">
+  <meta property="og:description" content="Flutter, React Native, Android and iOS apps for startups and businesses.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+
+<style id="red-black-theme">
+:root{
+  --bg:#070707;
+  --bg2:#0d0d0d;
+  --card:#121212;
+  --text:#f5f5f5;
+  --muted:#a7a7a7;
+  --line:#262626;
+  --red:#e50914;
+  --red2:#ff2a2a;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Inter",Arial,sans-serif;
+  font-feature-settings:"cv02","cv03","cv04";
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.brand strong,.stats b,.project-body h3,.service h3{
+  font-family:"Sora","Inter",sans-serif;
+  letter-spacing:-.02em;
+}
+h1{font-weight:800;line-height:1.06}
+h2{font-weight:700;line-height:1.14}
+h3{font-weight:600}
+code,pre,.code-card pre{font-family:"JetBrains Mono",Consolas,monospace}
+.brand strong{font-weight:700;letter-spacing:.01em}
+.eyebrow{font-family:"Sora",sans-serif;font-weight:700}
+.wa-ico{
+  width:1em;height:1em;flex:none;
+  fill:currentColor;vertical-align:-.12em;
+}
+.whatsapp,.contact-mini a:first-child{display:inline-flex;align-items:center;gap:7px}
+.chat-dot .wa-ico{width:26px;height:26px}
+.chat-dot{display:grid;place-items:center;line-height:0}
+body:before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(circle at 85% 12%,rgba(229,9,20,.18),transparent 28%),
+    radial-gradient(circle at 10% 70%,rgba(229,9,20,.08),transparent 30%);
+}
+.nav{
+  background:rgba(7,7,7,.88)!important;
+  border-bottom:1px solid var(--line)!important;
+  backdrop-filter:blur(16px);
+}
+.brand-mark{
+  background:var(--red)!important;
+  color:#fff!important;
+}
+.brand strong,.brand small{color:var(--text)}
+nav a{color:#d8d8d8!important}
+nav a:hover{color:var(--red2)!important}
+.theme-btn,.menu-btn{
+  background:#151515!important;color:#fff!important;border:1px solid #333!important;
+}
+.whatsapp,.hire,.primary{
+  background:var(--red)!important;color:#fff!important;
+  border-color:var(--red)!important;
+}
+.whatsapp:hover,.hire:hover,.primary:hover{background:var(--red2)!important}
+.secondary{
+  background:#111!important;color:#fff!important;border:1px solid #3a3a3a!important;
+}
+.secondary:hover{border-color:var(--red)!important;color:#fff!important}
+.availability{color:#ff4b4b!important}
+.eyebrow{color:#ff3434!important;letter-spacing:.12em}
+h1 span,h2 span{color:var(--red)!important}
+.lead,p{color:var(--muted)}
+.chips span{
+  background:#111!important;border:1px solid #2d2d2d!important;color:#eee!important;
+}
+.stats{
+  border-top:1px solid var(--line)!important;
+  border-bottom:1px solid var(--line)!important;
+}
+.stats b{color:#fff!important}
+.profile-card,.float-card,.code-card,.service,.project,.review,.feature-grid article{
+  background:linear-gradient(145deg,#151515,#0c0c0c)!important;
+  border:1px solid #292929!important;
+  box-shadow:0 18px 50px rgba(0,0,0,.35)!important;
+}
+.profile-card{overflow:hidden;position:relative}
+.profile-card:after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(229,9,20,.16);
+}
+.badge{background:var(--red)!important;color:#fff!important}
+.uploaded-photo{
+  padding:0!important;
+  min-height:560px;
+  height:560px;
+  overflow:hidden;
+  background:#080808!important;
+}
+.uploaded-photo img{
+  width:100%;height:100%;display:block;
+  object-fit:cover;
+  object-position:center top;
+  filter:saturate(1.02) contrast(1.03);
+}
+.profile-bottom{background:rgba(8,8,8,.92)!important}
+.profile-bottom span{color:#ff3b3b!important}
+.float-card{color:#fff!important}
+.float-card:first-letter{color:var(--red)}
+.ticker{
+  background:#0d0d0d!important;border-top:1px solid #222!important;border-bottom:1px solid #222!important;
+}
+.ticker b{color:#fff!important}
+.section-head h2,.section h2{color:#fff}
+.service i,.service .icon{color:var(--red)!important}
+.service:hover,.project:hover,.review:hover,.feature-grid article:hover{
+  border-color:rgba(229,9,20,.65)!important;
+  transform:translateY(-4px);
+  transition:.25s ease;
+}
+.tags,.project-meta{color:#ff5b5b!important}
+.process article{
+  background:#101010!important;border:1px solid #252525!important;
+}
+.process article span{background:var(--red)!important;color:#fff!important}
+.skill>div{background:#222!important}
+.skill>div i{background:var(--red)!important}
+.tool-grid span{
+  background:#111!important;border:1px solid #2b2b2b!important;color:#eee!important;
+}
+.stars{color:#ff3030!important}
+.cta{
+  background:linear-gradient(135deg,#150707,#080808)!important;
+  border:1px solid #3a1111!important;
+}
+input,textarea,select{
+  background:#101010!important;color:#fff!important;border:1px solid #303030!important;
+}
+input:focus,textarea:focus,select:focus{border-color:var(--red)!important;outline:none}
+.footer{
+  background:#050505!important;border-top:1px solid #222!important;color:#888!important;
+}
+.chat{
+  background:#111!important;border:1px solid #333!important;
+}
+.chat-dot{color:var(--red)!important}
+@media (max-width:800px){
+  .uploaded-photo{min-height:430px;height:430px}
+}
+</style>
+
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark">Y</span>
+      <span><strong>AZRUNMUZI</strong><small>FREELANCE APPDEVELOPER & WEB DEVELOPER </small></span>
+    </a>
+    <nav id="navLinks">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#work">Portfolio</a>
+      <a href="#skills">Skills</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">☼</button>
+      <a class="whatsapp" href="https://wa.me/919895657390" target="_blank" rel="noopener" aria-label="WhatsApp 9895657390"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3.2c-7.06 0-12.8 5.72-12.8 12.77 0 2.25.6 4.45 1.73 6.38L3.2 28.8l6.6-1.72a12.86 12.86 0 0 0 6.24 1.6h.01c7.05 0 12.79-5.72 12.79-12.77S23.1 3.2 16.04 3.2zm0 23.44h-.01a10.6 10.6 0 0 1-5.42-1.49l-.39-.23-4.02 1.05 1.07-3.9-.25-.4a10.62 10.62 0 0 1-1.63-5.7c0-5.88 4.79-10.66 10.66-10.66a10.6 10.6 0 0 1 7.55 3.13 10.6 10.6 0 0 1 3.13 7.55c0 5.87-4.79 10.65-10.66 10.65zm5.85-7.99c-.32-.16-1.9-.94-2.19-1.04-.29-.11-.5-.16-.72.15-.21.32-.82 1.04-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.77-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-1.04-2.37-.27-.64-.56-.55-.77-.56h-.66c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.08 1.31 3.29c.16.21 2.26 3.45 5.47 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37z"/></svg><span>9895657390</span></a>
+      <a class="hire" href="#contact">Hire Me</a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-grid" id="home">
+      <div class="hero-copy reveal">
+        <div class="availability">● Available for new projects · Remote</div>
+        <p class="eyebrow">FREELANCE MOBILE APP DEVELOPER</p>
+        <h1>Turning ideas into <span>world-class apps.</span></h1>
+        <p class="lead">I build polished Flutter, React Native, Android and iOS applications for startups, businesses and ambitious founders.</p>
+        <div class="chips"><span>⌁ Flutter</span><span>⚛ React Native</span><span>♟ Android</span><span>● iOS / Swift</span><span>🔥 Firebase</span></div>
+        <div class="hero-actions"><a class="primary" href="#work">View My Work →</a><a class="secondary" href="#contact">✉ Get a Free Quote</a></div>
+        <div class="contact-mini"><a href="https://wa.me/919895657390" target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3.2c-7.06 0-12.8 5.72-12.8 12.77 0 2.25.6 4.45 1.73 6.38L3.2 28.8l6.6-1.72a12.86 12.86 0 0 0 6.24 1.6h.01c7.05 0 12.79-5.72 12.79-12.77S23.1 3.2 16.04 3.2zm0 23.44h-.01a10.6 10.6 0 0 1-5.42-1.49l-.39-.23-4.02 1.05 1.07-3.9-.25-.4a10.62 10.62 0 0 1-1.63-5.7c0-5.88 4.79-10.66 10.66-10.66a10.6 10.6 0 0 1 7.55 3.13 10.6 10.6 0 0 1 3.13 7.55c0 5.87-4.79 10.65-10.66 10.65zm5.85-7.99c-.32-.16-1.9-.94-2.19-1.04-.29-.11-.5-.16-.72.15-.21.32-.82 1.04-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.77-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-1.04-2.37-.27-.64-.56-.55-.77-.56h-.66c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.08 1.31 3.29c.16.21 2.26 3.45 5.47 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37z"/></svg>WhatsApp · +91 9895657390</a><a href="tel:+919895657390">☎ 9895657390</a></div>
+        <div class="stats"><div><b>25+</b><small>Apps Delivered</small></div><div><b>5+</b><small>Years Experience</small></div><div><b>500K+</b><small>Downloads</small></div></div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="profile-card">
+          <div class="badge">● FREELANCE DEVELOPER</div>
+          <div class="portrait uploaded-photo"><img src="assets/photo.jpg" alt="AZRUNMUZI profile photo"></div>
+          <div class="profile-bottom"><div><b>Your </b><small>Freelance App Developer</small></div><span>● AVAILABLE</span></div>
+        </div>
+        <div class="float-card top">⚡ <b>Fast Delivery</b><small>Clean & scalable builds</small></div>
+        <div class="float-card bottom">▣ <b>25+ Apps</b><small>Web • Android • iOS</small></div>
+      </div>
+    </section>
+
+    <section class="ticker"><span>TECHNOLOGIES I MASTER</span><b>Flutter</b><b>React Native</b><b>Android</b><b>iOS / Swift</b><b>Firebase</b><b>Node.js</b></section>
+
+    <section class="section about" id="about">
+      <div class="code-card reveal">
+<pre>const developer = {
+  name: "AZRUNMUZI",
+  role: "Freelance Mobile Developer",
+  stack: ["Flutter", "React Native", "Kotlin", "Swift"],
+  available: true
+};</pre>
+        <div class="code-actions"><a class="primary" href="#contact">Hire Me</a><a class="secondary" href="#work">My Work</a></div>
+      </div>
+      <div class="about-copy reveal"><p class="eyebrow">ABOUT ME</p><h2>Building digital products people <span>love to use.</span></h2>
+        <p>From the first idea to App Store launch, I combine clean UI, reliable engineering and practical product thinking to turn concepts into production-ready applications.</p>
+        <div class="feature-grid"><article>📱 <b>Mobile-First</b><small>Interfaces designed around real mobile usage.</small></article><article>⚡ <b>Performance</b><small>Fast startup, smooth animations and efficient code.</small></article><article>🔐 <b>Secure Code</b><small>Good API, auth and data-handling practices.</small></article><article>🛠 <b>Full Support</b><small>Maintenance, fixes and updates after launch.</small></article></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-head"><div><p class="eyebrow">WHAT I DO</p><h2>Services tailored to <span>your goals.</span></h2><p>End-to-end development from strategy and UI to deployment and ongoing support.</p></div></div>
+      <div class="service-grid">
+        <article class="service accent-blue"><i>01</i><div class="icon">⌁</div><h3>Flutter Development</h3><p>Cross-platform iOS and Android apps with a shared, maintainable codebase.</p><div class="tags">Flutter · Dart · Firebase · Riverpod</div></article>
+        <article class="service"><i>02</i><div class="icon">⚛</div><h3>React Native Apps</h3><p>Production-ready JavaScript and TypeScript applications with reusable components.</p><div class="tags">React Native · TypeScript · Expo · Redux</div></article>
+        <article class="service"><i>03</i><div class="icon">♟</div><h3>Native Android</h3><p>Kotlin-first Android applications using modern Jetpack architecture.</p><div class="tags">Kotlin · Jetpack · Room · Compose</div></article>
+        <article class="service"><i>04</i><div class="icon">●</div><h3>Native iOS</h3><p>Swift and SwiftUI apps with polished native experiences and App Store support.</p><div class="tags">Swift · SwiftUI · CoreData · CloudKit</div></article>
+        <article class="service"><i>05</i><div class="icon">☁</div><h3>API & Backend</h3><p>REST APIs, Firebase, Supabase, authentication, databases and third-party integrations.</p><div class="tags">REST API · Firebase · Supabase · Node.js</div></article>
+        <article class="service"><i>06</i><div class="icon">♢</div><h3>Maintenance & Support</h3><p>Updates, performance tuning, crash monitoring, fixes and release support.</p><div class="tags">Bug Fixes · Updates · CI/CD · Monitoring</div></article>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="section-head centered"><p class="eyebrow">MY APPROACH</p><h2>How I build your app</h2></div>
+      <div class="process-grid">
+        <article><span>01</span><h3>Discovery</h3><p>Understand goals, users, scope and the business problem before development.</p></article>
+        <article><span>02</span><h3>Design</h3><p>Turn the product idea into intuitive wireframes and polished interfaces.</p></article>
+        <article><span>03</span><h3>Development</h3><p>Build clean, documented and testable features with regular demos.</p></article>
+        <article><span>04</span><h3>Launch & Beyond</h3><p>Handle store releases, monitoring, fixes and post-launch improvements.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head row"><div><p class="eyebrow">FEATURED WORK</p><h2>Apps I've shipped</h2></div><a href="#contact">Discuss your project →</a></div>
+      <div class="portfolio-grid">
+        <article class="project"><div class="project-art art1"><span>Android & iOS</span><strong>AX</strong></div><div class="project-body"><small>LEARNING PLATFORM</small><h3>LearnFlow</h3><p>A modern learning application with lessons, quizzes, progress tracking and notifications.</p><div class="project-meta">4.9 ★ · 100K+ users</div></div></article>
+        <article class="project"><div class="project-art art2"><span>Android</span><strong>♨</strong></div><div class="project-body"><small>FOOD & NUTRITION</small><h3>NutriTrack</h3><p>Calorie and macro tracking app with barcode scanning, meal planning and analytics.</p><div class="project-meta">4.8 ★ · 50K+ downloads</div></div></article>
+        <article class="project"><div class="project-art art3"><span>Android & iOS</span><strong>◎</strong></div><div class="project-body"><small>BUSINESS PLATFORM</small><h3>TableFlow</h3><p>Restaurant operations platform for ordering, kitchen display and business analytics.</p><div class="project-meta">4.7 ★ · 25K+ downloads</div></div></article>
+        <article class="project"><div class="project-art art4"><span>Android</span><strong>ϟ</strong></div><div class="project-body"><small>UTILITY</small><h3>SpeedTest Pro</h3><p>Network analyzer with speed, ping, jitter and connection history.</p><div class="project-meta">4.6 ★ · 500K+ downloads</div></div></article>
+        <article class="project"><div class="project-art art5"><span>Android</span><strong>⌂</strong></div><div class="project-body"><small>COMMUNITY PLATFORM</small><h3>ConnectHub</h3><p>Community application with profiles, messaging, discovery and secure authentication.</p><div class="project-meta">4.9 ★ · 10K+ users</div></div></article>
+        <article class="project"><div class="project-art art6"><span>Android & iOS</span><strong>✦</strong></div><div class="project-body"><small>HEALTH & FITNESS</small><h3>FitPulse</h3><p>Fitness planning, activity tracking and personalized progress dashboards.</p><div class="project-meta">4.8 ★ · 30K+ downloads</div></div></article>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-head centered"><p class="eyebrow">EXPERTISE</p><h2>Skills & Technologies</h2></div>
+      <div class="skills-layout"><div><h3>CORE PROFICIENCIES</h3>
+        <div class="skill"><label>Flutter / Dart <b>95%</b></label><div><i style="width:95%"></i></div></div>
+        <div class="skill"><label>React Native <b>90%</b></label><div><i style="width:90%"></i></div></div>
+        <div class="skill"><label>Android / Kotlin <b>86%</b></label><div><i style="width:86%"></i></div></div>
+        <div class="skill"><label>iOS / Swift <b>82%</b></label><div><i style="width:82%"></i></div></div>
+        <div class="skill"><label>Firebase / APIs <b>92%</b></label><div><i style="width:92%"></i></div></div>
+      </div><div><h3>TOOLS & PLATFORMS</h3><div class="tool-grid"><span>Git / GitHub</span><span>VS Code</span><span>Android Studio</span><span>Xcode</span><span>Figma</span><span>Postman</span><span>Google Play</span><span>App Store</span><span>Firebase</span><span>Docker</span><span>Supabase</span><span>Node.js</span></div></div></div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="section-head centered"><p class="eyebrow">SOCIAL PROOF</p><h2>What clients say</h2><p>Real feedback can be added here from your freelance projects, app listings and client references.</p></div>
+      <div class="review-grid">
+        <article class="review"><div class="stars">★★★★★</div><p>“The app was delivered cleanly and the communication throughout the project was excellent. The final product feels polished and reliable.”</p><footer><b>Client Name</b><small>Startup Founder · India</small></footer></article>
+        <article class="review"><div class="stars">★★★★★</div><p>“Strong attention to UI details and very responsive to feedback. The app launch process was handled smoothly from build to release.”</p><footer><b>Client Name</b><small>Business Owner · Bengaluru</small></footer></article>
+        <article class="review"><div class="stars">★★★★★</div><p>“Great technical execution and post-launch support. The backend integrations and mobile experience worked exactly as planned.”</p><footer><b>Client Name</b><small>Product Manager · Kerala</small></footer></article>
+      </div>
+    </section>
+
+    <section class="cta section" id="contact"><div><p class="eyebrow">LET'S WORK TOGETHER</p><h2>Have an app idea?<br><span>Let's build it.</span></h2><p>Tell me what you are planning and I'll help you turn it into a clear development plan.</p></div>
+      <form id="contactForm"><input required placeholder="Your name"><input required type="email" placeholder="Email address"><select><option>Project type</option><option>Mobile App</option><option>Website</option><option>API / Backend</option><option>UI/UX</option></select><textarea required rows="5" placeholder="Tell me about your project"></textarea><button class="primary" type="submit">Send Project Enquiry →</button><p id="formMsg"></p></form>
+    </section>
+  </main>
+
+  <div class="chat" id="chat"><div class="chat-message">👋 Hi! How can I help?</div><button>I have a question</button><button>Tell me more</button><div class="chat-dot"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3.2c-7.06 0-12.8 5.72-12.8 12.77 0 2.25.6 4.45 1.73 6.38L3.2 28.8l6.6-1.72a12.86 12.86 0 0 0 6.24 1.6h.01c7.05 0 12.79-5.72 12.79-12.77S23.1 3.2 16.04 3.2zm0 23.44h-.01a10.6 10.6 0 0 1-5.42-1.49l-.39-.23-4.02 1.05 1.07-3.9-.25-.4a10.62 10.62 0 0 1-1.63-5.7c0-5.88 4.79-10.66 10.66-10.66a10.6 10.6 0 0 1 7.55 3.13 10.6 10.6 0 0 1 3.13 7.55c0 5.87-4.79 10.65-10.66 10.65zm5.85-7.99c-.32-.16-1.9-.94-2.19-1.04-.29-.11-.5-.16-.72.15-.21.32-.82 1.04-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.77-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-1.04-2.37-.27-.64-.56-.55-.77-.56h-.66c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.08 1.31 3.29c.16.21 2.26 3.45 5.47 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.77 2.17-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37z"/></svg></div></div>
+  <footer class="footer">© <span id="year"></span>  AZRUNMUZI  · Freelance Mobile App Developer · Built with HTML, CSS & JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>

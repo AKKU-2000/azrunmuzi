@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+WhatsApp Image *.jpeg
+AZRUNMUZI_red_black_portfolio.html
+index-blue.html
