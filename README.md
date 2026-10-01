@@ -1,24 +1,43 @@
-# Freelancer Portfolio — HTML/CSS/JavaScript
+# AZRUNMUZI — Freelance Mobile App Developer Portfolio
 
-A responsive dark premium freelance developer portfolio inspired by the supplied reference screenshots.
+Static portfolio site (HTML/CSS/JavaScript), deployed automatically to GitHub Pages.
 
 ## Files
-- `index.html` — page structure/content
-- `style.css` — responsive visual design
-- `script.js` — theme toggle, reveal animations, mobile menu and form demo
+
+| File | Purpose |
+|---|---|
+| `index.html` | Page structure and content (the live site) |
+| `style.css` | Responsive visual design |
+| `script.js` | Theme toggle, reveal animations, mobile menu, chat widget, form demo |
+| `assets/photo.jpg` | Profile photo |
+| `favicon.svg` | Favicon |
+| `404.html` | Not-found page |
+| `robots.txt` | Search crawler rules |
+| `.github/workflows/deploy.yml` | Auto-publish to GitHub Pages on every push to `main` |
 
 ## Customize
-Search and replace:
-- `Your Name`
-- `+91 00000 00000`
-- `https://wa.me/910000000000`
-- project names/descriptions
-- testimonials
+
+Search and replace in `index.html`:
+- project names and descriptions
+- testimonials (currently placeholder "Client Name")
 - skill percentages
-- profile photo placeholder
+- `9895657390` — the contact number (appears in the nav button, hero contact row, and contact form context)
 
-To use a real photo, replace the `.portrait` block in `index.html` with:
-`<img src="assets/profile.jpg" alt="Your Name">`
+### Profile photo
+Replace `assets/photo.jpg`. The hero image is rendered at 560px tall and uses
+`object-fit: cover` with `object-position: center top`, so a portrait-oriented
+photo works best.
 
-## Run
-Open `index.html` directly in Chrome/Edge, or use VS Code Live Server.
+## Contact form
+`script.js` currently shows a confirmation message only. To receive submissions,
+connect a service such as Formspree or Web3Forms and POST to it in the
+`#contactForm` submit handler.
+
+## Local preview
+```bash
+npx serve .
+```
+Or open `index.html` directly, or use VS Code Live Server.
+
+## Deploy
+Push to `main`; GitHub Actions publishes the site automatically.
