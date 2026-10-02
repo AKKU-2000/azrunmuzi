@@ -163,6 +163,31 @@ input:focus,textarea:focus,select:focus{border-color:var(--red)!important;outlin
   background:#111!important;border:1px solid #333!important;
 }
 .chat-dot{color:var(--red)!important}
+.hero{position:relative;overflow:hidden}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;
+}
+.hero-bg img{
+  width:100%;height:100%;object-fit:cover;object-position:center 16%;
+  opacity:.26;filter:saturate(.85) contrast(1.06) brightness(.8);
+  transform:scale(1.1);
+  animation:heroZoom 26s ease-in-out infinite alternate;
+  will-change:transform;
+}
+.hero-bg:after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 78% 28%,rgba(229,9,20,.32),transparent 55%),
+    linear-gradient(180deg,rgba(7,7,7,.84) 0%,rgba(7,7,7,.92) 100%);
+}
+@keyframes heroZoom{
+  from{transform:scale(1.08) translate3d(0,0,0)}
+  to{transform:scale(1.22) translate3d(-1.5%,-1.5%,0)}
+}
+.hero-copy,.hero-visual{position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){
+  .hero-bg img{animation:none;transform:scale(1.08)}
+}
 @media (max-width:800px){
   .uploaded-photo{min-height:430px;height:430px}
 }
@@ -189,6 +214,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--red)!important;outlin
 
   <main>
     <section class="hero section-grid" id="home">
+      <div class="hero-bg" aria-hidden="true"><img src="assets/photo.jpg" alt=""></div>
       <div class="hero-copy reveal">
         <div class="availability">● Available for new projects · Remote</div>
         <p class="eyebrow">FREELANCE MOBILE APP DEVELOPER</p>
