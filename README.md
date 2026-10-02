@@ -1,6 +1,12 @@
 # AZRUNMUZI — Freelance Mobile App Developer Portfolio
 
-Static portfolio site (HTML/CSS/JavaScript), deployed automatically to GitHub Pages.
+Static portfolio site (HTML/CSS/JavaScript), deployed to GitHub Pages.
+
+## Live site
+
+**https://akku-2000.github.io/azrunmuzi/**
+
+Repository: https://github.com/AKKU-2000/azrunmuzi
 
 ## Files
 
@@ -13,7 +19,9 @@ Static portfolio site (HTML/CSS/JavaScript), deployed automatically to GitHub Pa
 | `favicon.svg` | Favicon |
 | `404.html` | Not-found page |
 | `robots.txt` | Search crawler rules |
-| `.github/workflows/deploy.yml` | Auto-publish to GitHub Pages on every push to `main` |
+| `.gitignore` | Excludes local-only files |
+
+`index-blue.html` and `AZRUNMUZI_red_black_portfolio.html` are alternative design drafts kept locally and excluded from deploy.
 
 ## Customize
 
@@ -40,4 +48,10 @@ npx serve .
 Or open `index.html` directly, or use VS Code Live Server.
 
 ## Deploy
-Push to `main`; GitHub Actions publishes the site automatically.
+Push to `main`; GitHub Pages builds from the `main` branch automatically.
+Changes appear at the live URL within a minute or two.
+
+Auto-deploy via GitHub Actions is optional. To enable it, add
+`.github/workflows/deploy.yml`, then set **Settings → Pages → Source** to
+**GitHub Actions**. Pushing a workflow file requires a token with the
+`workflow` scope.
