@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://akku-2000.github.io/azrunmuzi/sitemap.xml
